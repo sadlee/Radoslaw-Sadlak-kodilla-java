@@ -8,9 +8,6 @@ class Calculator {
     public int subtractNumbers(int x, int y) {
         return x - y;
     }
-}
-
-class App {
 
     public static void main (String[] args) {
         Calculator calculator = new Calculator();
