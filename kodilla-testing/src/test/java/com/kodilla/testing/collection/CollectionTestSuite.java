@@ -37,7 +37,7 @@ public class CollectionTestSuite {
     public void testOddNumbersExterminatorNormalList() {
         Random randomNumber = new Random();
         for (int i=0; i<50; i++) {
-            normalArrayList.add(randomNumber.nextInt((int) Math.pow(2, 31) - 1));
+            normalArrayList.add(randomNumber.nextInt((int) Math.pow(2, 15) - 1));
             if (normalArrayList.get(i) % 2 == 0) {
                 oddArrayExtract.add(normalArrayList.get(i));
             }
