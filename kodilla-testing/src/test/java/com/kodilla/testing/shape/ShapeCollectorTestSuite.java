@@ -53,13 +53,12 @@ public class ShapeCollectorTestSuite {
     public void testGetFigure() {
         //Given
         ShapeCollector shapeCollection = new ShapeCollector(new Triangle());
-        Shape triangle = new Triangle();
-        shapeCollection.addFigure(triangle);
+        shapeCollection.addFigure(new Triangle());
 
         //When
         String retrievedShape = shapeCollection.getFigure(0);
 
         //Then
-        Assert.assertEquals(triangle, retrievedShape);
+        Assert.assertEquals("Triangle", retrievedShape);
     }
 }
