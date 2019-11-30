@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.kodilla.testing.forum.statistics.ForumStatisticsTestSuite" tests="7" skipped="0" failures="0" errors="0" timestamp="2019-11-30T19:19:33" hostname="U0170490-TPL-A" time="0.139">
+  <properties/>
+  <testcase name="testCalculateAdvStatisticsMoreCommentsThanPosts" classname="com.kodilla.testing.forum.statistics.ForumStatisticsTestSuite" time="0.133"/>
+  <testcase name="testCalculateAdvStatisticsWithHundredUsers" classname="com.kodilla.testing.forum.statistics.ForumStatisticsTestSuite" time="0.001"/>
+  <testcase name="testCalculateAdvStatisticsLessCommentsThanPosts" classname="com.kodilla.testing.forum.statistics.ForumStatisticsTestSuite" time="0.001"/>
+  <testcase name="testCalculateAdvStatisticsWithZeroComments" classname="com.kodilla.testing.forum.statistics.ForumStatisticsTestSuite" time="0.001"/>
+  <testcase name="testCalculateAdvStatisticsWithZeroPosts" classname="com.kodilla.testing.forum.statistics.ForumStatisticsTestSuite" time="0.001"/>
+  <testcase name="testCalculateAdvStatisticsWithZeroUsers" classname="com.kodilla.testing.forum.statistics.ForumStatisticsTestSuite" time="0.001"/>
+  <testcase name="testCalculateAdvStatisticsWithThousandPosts" classname="com.kodilla.testing.forum.statistics.ForumStatisticsTestSuite" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
