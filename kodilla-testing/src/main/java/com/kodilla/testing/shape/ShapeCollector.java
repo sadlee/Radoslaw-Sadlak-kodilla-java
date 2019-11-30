@@ -19,16 +19,8 @@ public class ShapeCollector {
         shapeCollection.remove(shape);
     }
 
-    String getFigure (int n) {
-        return shapeCollection.get(n).getShapeName();
-    }
-
-    void showFigures() {
-        int i=0;
-        while (i!=shapeCollection.size()) {
-            System.out.println(shapeCollection.get(i).getShapeName());
-            i++;
-        }
+    public Shape getFigure (int n) {
+        return shapeCollection.get(n);
     }
 
     int size() {
