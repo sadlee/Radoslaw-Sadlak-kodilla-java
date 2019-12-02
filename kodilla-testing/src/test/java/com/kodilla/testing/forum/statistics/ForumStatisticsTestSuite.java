@@ -14,14 +14,13 @@ public class ForumStatisticsTestSuite {
         //Given
         Statistics statisticsMock = Mockito.mock(Statistics.class);
         ForumStatistics forumStatistics = new ForumStatistics();
+        when(statisticsMock.commentsCount()).thenReturn(100);
         //When
         forumStatistics.calculateAdvStatistics(statisticsMock);
         //Then
 
         assertEquals(0, forumStatistics.getPostsQty());
-
         assertEquals(0, forumStatistics.getPostsAvgPerUser(), 0.01);
-
         assertEquals(0, forumStatistics.getCommentsAvgPerPost(), 0.01);
     }
 
@@ -30,15 +29,14 @@ public class ForumStatisticsTestSuite {
         //Given
         Statistics statisticsMock = Mockito.mock(Statistics.class);
         when(statisticsMock.postsCount()).thenReturn(1000);
+        when(statisticsMock.commentsCount()).thenReturn(50);
         ForumStatistics forumStatistics = new ForumStatistics();
         //When
         forumStatistics.calculateAdvStatistics(statisticsMock);
         //Then
 
         assertEquals(1000, forumStatistics.getPostsQty());
-
         assertEquals(0, forumStatistics.getPostsAvgPerUser(), 0.01);
-
         assertEquals(0, forumStatistics.getCommentsAvgPerPost(), 0.01);
     }
 
@@ -46,6 +44,7 @@ public class ForumStatisticsTestSuite {
     public void testCalculateAdvStatisticsWithZeroComments(){
         //Given
         Statistics statisticsMock = Mockito.mock(Statistics.class);
+        when(statisticsMock.postsCount()).thenReturn(1000);
 
         ForumStatistics forumStatistics = new ForumStatistics();
         //When
@@ -101,13 +100,17 @@ public class ForumStatisticsTestSuite {
     public void testCalculateAdvStatisticsWithZeroUsers(){
         //Given
         Statistics statisticsMock = Mockito.mock(Statistics.class);
+        when(statisticsMock.usersNames()).thenReturn(new ArrayList<>());
+        when(statisticsMock.postsCount()).thenReturn(50);
+        when(statisticsMock.commentsCount()).thenReturn(100);
 
         ForumStatistics forumStatistics = new ForumStatistics();
         //When
         forumStatistics.calculateAdvStatistics(statisticsMock);
+
+
         //Then
         assertEquals(0, forumStatistics.getUsersQty());
-
         assertEquals(0, forumStatistics.getPostsAvgPerUser(), 0.01);
         assertEquals(0, forumStatistics.getCommentsAvgPerUser(), 0.01);
 
