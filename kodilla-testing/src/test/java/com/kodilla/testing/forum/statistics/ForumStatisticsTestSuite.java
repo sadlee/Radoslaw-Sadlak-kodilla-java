@@ -2,6 +2,7 @@ package com.kodilla.testing.forum.statistics;
 
 import org.junit.Test;
 import org.mockito.Mockito;
+
 import java.util.ArrayList;
 import java.util.List;
 import static org.junit.Assert.assertEquals;
@@ -38,6 +39,7 @@ public class ForumStatisticsTestSuite {
         List<String> users = new ArrayList<>();
         users.add("Jan Kowalski");
 
+        when(statisticsMock.usersNames()).thenReturn(users);
         when(statisticsMock.commentsCount()).thenReturn(100);
         when(statisticsMock.postsCount()).thenReturn(1000);
         when(statisticsMock.commentsCount()).thenReturn(500);
@@ -58,6 +60,8 @@ public class ForumStatisticsTestSuite {
 
         List<String> users = new ArrayList<>();
         users.add("Jan Kowalski");
+
+        when(statisticsMock.usersNames()).thenReturn(users);
         when(statisticsMock.commentsCount()).thenReturn(0);
         when(statisticsMock.postsCount()).thenReturn(1000);
 
@@ -79,6 +83,7 @@ public class ForumStatisticsTestSuite {
         List<String> users = new ArrayList<>();
         users.add("Jan Kowalski");
 
+        when(statisticsMock.usersNames()).thenReturn(users);
         when(statisticsMock.commentsCount()).thenReturn(2);
         when(statisticsMock.postsCount()).thenReturn(10);
 
@@ -101,6 +106,7 @@ public class ForumStatisticsTestSuite {
         List<String> users = new ArrayList<>();
         users.add("Jan Kowalski");
 
+        when(statisticsMock.usersNames()).thenReturn(users);
         when(statisticsMock.commentsCount()).thenReturn(10);
         when(statisticsMock.postsCount()).thenReturn(2);
 
@@ -144,6 +150,8 @@ public class ForumStatisticsTestSuite {
         for(int i=0; i<100; i++){
             users.add("user");
         }
+
+        when(statisticsMock.usersNames()).thenReturn(users);
         when(statisticsMock.postsCount()).thenReturn(1000);
         when(statisticsMock.commentsCount()).thenReturn(2000);
 
