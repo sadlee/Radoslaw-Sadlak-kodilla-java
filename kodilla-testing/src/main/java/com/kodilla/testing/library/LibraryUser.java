@@ -1,54 +1,54 @@
 package com.kodilla.testing.library;
 
 public class LibraryUser {
-    public class LibraryUser {
-        String firstname;
-        String lastname;
-        String peselId;
+    private String firstname;
+    private String lastname;
+    private String peselId;
 
-        public LibraryUser(String firstname, String lastname, String peselId) {
-            this.firstname = firstname;
-            this.lastname = lastname;
-            this.peselId = peselId;
-        }
+    public LibraryUser(String firstname, String lastname, String peselId) {
+        this.firstname = firstname;
+        this.lastname = lastname;
+        this.peselId = peselId;
+    }
 
-        public String getFirstname() {
-            return firstname;
-        }
+    public String getFirstname() {
+        return firstname;
+    }
 
-        public String getLastname() {
-            return lastname;
-        }
+    public String getLastname() {
+        return lastname;
+    }
 
-        public String getPeselId() {
-            return peselId;
-        }
+    public String getPeselId() {
+        return peselId;
+    }
 
-        @Override
-        public String toString() {
-            return "LibraryUser{" +
-                    "firstname='" + firstname + '\'' +
-                    ", lastname='" + lastname + '\'' +
-                    ", peselId='" + peselId + '\'' +
-                    '}';
-        }
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
 
-        @Override
-        public boolean equals(Object o) {
-            if (this == o) return true;
-            if (!(o instanceof LibraryUser)) return false;
-            LibraryUser that = (LibraryUser) o;
-            if (!firstname.equals(that.firstname)) return false;
-            if (!lastname.equals(that.lastname)) return false;
-            return peselId.equals(that.peselId);
-        }
+        LibraryUser that = (LibraryUser) o;
 
-        @Override
-        public int hashCode() {
-            int result = firstname.hashCode();
-            result = 31 * result + lastname.hashCode();
-            result = 31 * result + peselId.hashCode();
-            return result;
-        }
+        if (!getFirstname().equals(that.getFirstname())) return false;
+        if (!getLastname().equals(that.getLastname())) return false;
+        return getPeselId().equals(that.getPeselId());
+    }
+
+    @Override
+    public int hashCode() {
+        int result = getFirstname().hashCode();
+        result = 31 * result + getLastname().hashCode();
+        result = 31 * result + getPeselId().hashCode();
+        return result;
+    }
+
+    @Override
+    public String toString() {
+        return "LibraryUser{" +
+                "firstname='" + firstname + '\'' +
+                ", lastname='" + lastname + '\'' +
+                ", peselId='" + peselId + '\'' +
+                '}';
     }
 }

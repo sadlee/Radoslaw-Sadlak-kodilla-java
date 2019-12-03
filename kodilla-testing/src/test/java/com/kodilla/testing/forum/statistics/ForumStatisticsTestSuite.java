@@ -17,7 +17,7 @@ public class ForumStatisticsTestSuite {
         List<String> users = new ArrayList<>();
         users.add("Jan Kowalski");
 
-        when(statisticsMock.usersNames()).thenReturn(users)
+        when(statisticsMock.usersNames()).thenReturn(users);
         when(statisticsMock.postsCount()).thenReturn(0);
         when(statisticsMock.commentsCount()).thenReturn(100);
         //When
