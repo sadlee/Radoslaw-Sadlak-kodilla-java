@@ -1,5 +1,7 @@
 package com.kodilla.stream.forum;
 
+import org.junit.Assert;
+
 public class ForumUserTestSuite {
     public void testGetLocationsOfFriends() {
         //Given

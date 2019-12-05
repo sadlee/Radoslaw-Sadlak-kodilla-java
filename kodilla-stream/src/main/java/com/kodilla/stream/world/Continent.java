@@ -11,8 +11,7 @@ public final class Continent {
         this.continentName = continentName;
     }
 
-    public void addCountry (Country country) {
-        countries.add(country); }
+    public void addCountry (Country country) { countries.add(country); }
 
     public Set<PeopleStorage> getCountries() {
         return countries;
