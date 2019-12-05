@@ -68,4 +68,12 @@ public class ForumUser {
     public int hashCode() {
         return username.hashCode();
     }
+
+    public Set<String> getLocationsOfFriendsOfFriends() {
+        return friends.stream()
+                .flatMap(user -> user.getFriends().stream())
+                .filter(user -> user != this)
+                .map(ForumUser::getLocation)
+                .collect(Collectors.toSet());
+    }
 }
