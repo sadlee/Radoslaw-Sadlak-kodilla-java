@@ -1,6 +1,7 @@
 package com.kodilla.good.patterns.challenges;
 
 public class BuyNowRetriever {
+
     public BuyNow retrieve() {
         User user = new User("John", "snow");
         String thing = "Laptop";

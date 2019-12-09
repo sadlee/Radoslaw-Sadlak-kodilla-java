@@ -13,15 +13,15 @@ public class OrderProcessor {
         this.orderRepository = orderRepository;
     }
 
-    public BuyItem process(final BuyNow buyNow) {
+    public BuyDto process(final BuyNow buyNow) {
         boolean isBuyed = productOrderService.sell(buyNow);
 
         if(isBuyed) {
             informationService.inform(buyNow);
             orderRepository.createOrder(buyNow);
-            return new BuyItem(buyNow.getUser(), true);
+            return new BuyDto(buyNow.getUser(), true);
         } else {
-            return new BuyItem(buyNow.getUser(), false);
+            return new BuyDto(buyNow.getUser(), false);
         }
     }
 }
