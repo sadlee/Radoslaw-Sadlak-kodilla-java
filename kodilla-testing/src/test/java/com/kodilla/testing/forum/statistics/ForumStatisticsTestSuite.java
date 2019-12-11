@@ -31,29 +31,6 @@ public class ForumStatisticsTestSuite {
     }
 
     @Test
-    public void testCalculateAdvStatisticsWithThousandPosts(){
-        //Given
-        Statistics statisticsMock = Mockito.mock(Statistics.class);
-        ForumStatistics forumStatistics = new ForumStatistics();
-
-        List<String> users = new ArrayList<>();
-        users.add("Jan Kowalski");
-
-        when(statisticsMock.usersNames()).thenReturn(users);
-        when(statisticsMock.commentsCount()).thenReturn(100);
-        when(statisticsMock.postsCount()).thenReturn(1000);
-        when(statisticsMock.commentsCount()).thenReturn(500);
-
-        //When
-        forumStatistics.calculateAdvStatistics(statisticsMock);
-        //Then
-
-        assertEquals(1000, forumStatistics.getPostsQty());
-        assertEquals(1000, forumStatistics.getPostsAvgPerUser(), 0.01);
-        assertEquals(500, forumStatistics.getCommentsAvgPerPost(), 0.01);
-    }
-
-    @Test
     public void testCalculateAdvStatisticsWithZeroComments(){
         //Given
         Statistics statisticsMock = Mockito.mock(Statistics.class);
