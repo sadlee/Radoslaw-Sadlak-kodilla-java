@@ -8,15 +8,15 @@ import org.springframework.context.annotation.Scope;
 public class BoardConfig {
     @Autowired
     @Qualifier("listOne")
-    public TaskList listOne;
+    private TaskList listOne;
 
     @Autowired
     @Qualifier("listTwo")
-    public TaskList listTwo;
+    private TaskList listTwo;
 
     @Autowired
     @Qualifier("listThree")
-    public TaskList listThree;
+    private TaskList listThree;
 
     @Bean
     public Board getBoard() {
@@ -25,19 +25,19 @@ public class BoardConfig {
 
     @Bean(name = "listOne")
     @Scope("prototype")
-    public TaskList getListOne() {
+    private TaskList getListOne() {
         return new TaskList();
     }
 
     @Bean(name = "listTwo")
     @Scope("prototype")
-    public TaskList getListTwo() {
+    private TaskList getListTwo() {
         return new TaskList();
     }
 
     @Bean(name = "listThree")
     @Scope("prototype")
-    public TaskList getListThree() {
+    private TaskList getListThree() {
         return new TaskList();
     }
 }

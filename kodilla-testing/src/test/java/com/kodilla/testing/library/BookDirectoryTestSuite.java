@@ -3,8 +3,10 @@ package com.kodilla.testing.library;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import org.mockito.Mockito;
+
 import java.util.ArrayList;
 import java.util.List;
+
 import static org.junit.Assert.assertEquals;
 import static org.mockito.Matchers.anyString;
 import static org.mockito.Mockito.*;
@@ -16,7 +18,7 @@ public class BookDirectoryTestSuite {
     private static BookLibrary bookLibrary;
 
     @BeforeClass
-    public static void beforeClass(){
+    public static void beforeClass() {
         libraryDatabaseMock = Mockito.mock(LibraryDatabase.class);
         bookLibrary = new BookLibrary(libraryDatabaseMock);
     }
@@ -98,9 +100,9 @@ public class BookDirectoryTestSuite {
     }
 
     @Test
-    public void testListBooksInHandsOfZeroBooks(){
+    public void testListBooksInHandsOfZeroBooks() {
         //Given
-        List<Book>listOfZeroBooks = new ArrayList<>();
+        List<Book> listOfZeroBooks = new ArrayList<>();
         LibraryUser libraryUser = mock(LibraryUser.class);
         when(libraryDatabaseMock.listBooksInHandsOf(libraryUser)).thenReturn(listOfZeroBooks);
         //When
@@ -110,9 +112,9 @@ public class BookDirectoryTestSuite {
     }
 
     @Test
-    public void testListBooksInHandsOfOneBook(){
+    public void testListBooksInHandsOfOneBook() {
         //Given
-        List<Book>listOfOneBook = generateListOfNBooks(1);
+        List<Book> listOfOneBook = generateListOfNBooks(1);
         LibraryUser libraryUser = mock(LibraryUser.class);
         when(libraryDatabaseMock.listBooksInHandsOf(libraryUser)).thenReturn(listOfOneBook);
         //When
@@ -122,9 +124,9 @@ public class BookDirectoryTestSuite {
     }
 
     @Test
-    public void testListBooksInHandsOfFiveBooks(){
+    public void testListBooksInHandsOfFiveBooks() {
         //Given
-        List<Book>listOfFiveBooks = generateListOfNBooks(5);
+        List<Book> listOfFiveBooks = generateListOfNBooks(5);
         LibraryUser libraryUser = mock(LibraryUser.class);
         when(libraryDatabaseMock.listBooksInHandsOf(libraryUser)).thenReturn(listOfFiveBooks);
         //When

@@ -12,10 +12,9 @@ public class FlightSearch {
         airport.put("Chopin", true);
         airport.put("Balice", true);
 
-        if(airport.containsKey(flight.getArrivalAirport())) {
+        if (airport.containsKey(flight.getArrivalAirport())) {
             System.out.println("Arrival airport possible: " + flight.getArrivalAirport());
-        }
-        else
+        } else
             throw new RouteNotFoundException("No such airport");
     }
 }

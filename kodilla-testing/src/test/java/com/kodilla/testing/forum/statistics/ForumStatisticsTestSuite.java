@@ -5,13 +5,14 @@ import org.mockito.Mockito;
 
 import java.util.ArrayList;
 import java.util.List;
+
 import static org.junit.Assert.assertEquals;
 import static org.mockito.Mockito.when;
 
 public class ForumStatisticsTestSuite {
 
     @Test
-    public void testCalculateAdvStatisticsWithZeroPosts(){
+    public void testCalculateAdvStatisticsWithZeroPosts() {
         //Given
         Statistics statisticsMock = Mockito.mock(Statistics.class);
         ForumStatistics forumStatistics = new ForumStatistics();
@@ -31,7 +32,7 @@ public class ForumStatisticsTestSuite {
     }
 
     @Test
-    public void testCalculateAdvStatisticsWithZeroComments(){
+    public void testCalculateAdvStatisticsWithZeroComments() {
         //Given
         Statistics statisticsMock = Mockito.mock(Statistics.class);
 
@@ -53,7 +54,7 @@ public class ForumStatisticsTestSuite {
     }
 
     @Test
-    public void testCalculateAdvStatisticsLessCommentsThanPosts(){
+    public void testCalculateAdvStatisticsLessCommentsThanPosts() {
         //Given
         Statistics statisticsMock = Mockito.mock(Statistics.class);
 
@@ -77,7 +78,7 @@ public class ForumStatisticsTestSuite {
     }
 
     @Test
-    public void testCalculateAdvStatisticsMoreCommentsThanPosts(){
+    public void testCalculateAdvStatisticsMoreCommentsThanPosts() {
         //Given
         Statistics statisticsMock = Mockito.mock(Statistics.class);
         List<String> users = new ArrayList<>();
@@ -100,7 +101,7 @@ public class ForumStatisticsTestSuite {
     }
 
     @Test
-    public void testCalculateAdvStatisticsWithZeroUsers(){
+    public void testCalculateAdvStatisticsWithZeroUsers() {
         //Given
         Statistics statisticsMock = Mockito.mock(Statistics.class);
         when(statisticsMock.usersNames()).thenReturn(new ArrayList<>());
@@ -120,11 +121,11 @@ public class ForumStatisticsTestSuite {
     }
 
     @Test
-    public void testCalculateAdvStatisticsWithHundredUsers(){
+    public void testCalculateAdvStatisticsWithHundredUsers() {
         //Given
         Statistics statisticsMock = Mockito.mock(Statistics.class);
         List<String> users = new ArrayList<>();
-        for(int i=0; i<100; i++){
+        for (int i = 0; i < 100; i++) {
             users.add("user");
         }
 

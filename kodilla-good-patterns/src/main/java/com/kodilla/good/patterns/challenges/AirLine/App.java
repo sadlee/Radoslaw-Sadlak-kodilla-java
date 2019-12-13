@@ -4,7 +4,7 @@ import java.util.Set;
 
 public class App {
     public static void main(String[] args) {
-        FlightsList  listOfFight = new FlightsList();
+        FlightsList listOfFight = new FlightsList();
         Set<Flights> list = listOfFight.getTheList();
 
         FlightSearch search1 = new FlightSearch();

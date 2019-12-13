@@ -1,20 +1,23 @@
 package com.kodilla.testing.collection;
 
 import org.junit.*;
+
 import java.util.ArrayList;
 
 public class CollectionTestSuite {
 
     @Before
-    public void before(){
+    public void before() {
         System.out.println("Test Case: begin");
     }
+
     @After
-    public void after(){
+    public void after() {
         System.out.println("Test Case: end");
     }
+
     @Test
-    public void testOddNumbersExterminatorEmptyList(){
+    public void testOddNumbersExterminatorEmptyList() {
         OddNumbersExterminator oddNumbersExterminator = new OddNumbersExterminator();
 
         ArrayList<Integer> emptyList = new ArrayList<>();
@@ -22,8 +25,9 @@ public class CollectionTestSuite {
         System.out.println("Testing empty list");
         Assert.assertEquals(emptyList, resultList);
     }
+
     @Test
-    public void testOddNumbersExterminatorNormalList(){
+    public void testOddNumbersExterminatorNormalList() {
 
         OddNumbersExterminator oddNumbersExterminator = new OddNumbersExterminator();
         ArrayList<Integer> normalList = new ArrayList<>();
@@ -34,7 +38,7 @@ public class CollectionTestSuite {
         normalList.add(1);
         normalList.add(4);
         normalList.add(10);
-        ArrayList<Integer>expectedResultList = new ArrayList<>();
+        ArrayList<Integer> expectedResultList = new ArrayList<>();
         expectedResultList.add(2);
         expectedResultList.add(2);
         expectedResultList.add(4);

@@ -15,11 +15,11 @@ public class ShapeCollector {
         shapeCollection.add(shape);
     }
 
-    void removeFigure (Shape shape) {
+    void removeFigure(Shape shape) {
         shapeCollection.remove(shape);
     }
 
-    public Shape getFigure (int n) {
+    public Shape getFigure(int n) {
         return shapeCollection.get(n);
     }
 

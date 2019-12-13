@@ -20,7 +20,7 @@ public final class Country implements PeopleStorage {
     }
 
     @Override
-    public  BigDecimal getPeopleQuantity() {
+    public BigDecimal getPeopleQuantity() {
         return peopleQuantity;
     }
 }

@@ -16,7 +16,7 @@ public class OrderProcessor {
     public BuyDto process(final BuyNow buyNow) {
         boolean isBuyed = productOrderService.sell(buyNow);
 
-        if(isBuyed) {
+        if (isBuyed) {
             informationService.inform(buyNow);
             orderRepository.createOrder(buyNow);
             return new BuyDto(buyNow.getUser(), true);

@@ -7,7 +7,9 @@ import java.util.Set;
 public final class World {
     private final Set<Continent> continents = new HashSet<>();
 
-    public void addContinent (Continent continent) { continents.add(continent); }
+    public void addContinent(Continent continent) {
+        continents.add(continent);
+    }
 
     public BigDecimal getPeopleQuantity() {
         return continents.stream()

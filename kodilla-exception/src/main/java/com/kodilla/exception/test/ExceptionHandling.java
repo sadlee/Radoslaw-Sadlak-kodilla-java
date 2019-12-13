@@ -7,7 +7,7 @@ public class ExceptionHandling {
 
         try {
             String result = secondChallenge.probablyIWillThrowException(2.5, 0.8);
-        } catch(Exception e) {
+        } catch (Exception e) {
             System.out.println("Suspect value " + e);
         } finally {
             System.out.println("Always here");

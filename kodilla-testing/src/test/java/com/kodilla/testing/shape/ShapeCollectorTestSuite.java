@@ -5,6 +5,7 @@ import org.junit.*;
 public class ShapeCollectorTestSuite {
     public ShapeCollectorTestSuite() {
     }
+
     private static int testCounter = 0;
 
     @BeforeClass
@@ -57,7 +58,7 @@ public class ShapeCollectorTestSuite {
         shapeCollection.addFigure(triangle);
 
         //When
-        Shape retrievedShape  = shapeCollection.getFigure(0);
+        Shape retrievedShape = shapeCollection.getFigure(0);
 
         //Then
         Assert.assertEquals(triangle, retrievedShape);

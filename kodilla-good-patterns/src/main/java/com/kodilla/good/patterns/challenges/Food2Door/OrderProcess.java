@@ -7,7 +7,7 @@ public class OrderProcess {
         this.orderRespository = orderRespository;
     }
 
-    public OrderDto run(Producer producer){
+    public OrderDto run(Producer producer) {
         boolean isOrder = producer.process();
 
         if (isOrder) {

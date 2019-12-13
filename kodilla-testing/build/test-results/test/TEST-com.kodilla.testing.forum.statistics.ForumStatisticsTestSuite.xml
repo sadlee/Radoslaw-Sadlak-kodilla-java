@@ -1,12 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.kodilla.testing.forum.statistics.ForumStatisticsTestSuite" tests="6" skipped="0" failures="0" errors="0" timestamp="2019-12-11T09:55:37" hostname="U0170490-TPL-A" time="0.199">
-  <properties/>
-  <testcase name="testCalculateAdvStatisticsMoreCommentsThanPosts" classname="com.kodilla.testing.forum.statistics.ForumStatisticsTestSuite" time="0.194"/>
-  <testcase name="testCalculateAdvStatisticsWithHundredUsers" classname="com.kodilla.testing.forum.statistics.ForumStatisticsTestSuite" time="0.001"/>
-  <testcase name="testCalculateAdvStatisticsLessCommentsThanPosts" classname="com.kodilla.testing.forum.statistics.ForumStatisticsTestSuite" time="0.001"/>
-  <testcase name="testCalculateAdvStatisticsWithZeroComments" classname="com.kodilla.testing.forum.statistics.ForumStatisticsTestSuite" time="0.001"/>
-  <testcase name="testCalculateAdvStatisticsWithZeroPosts" classname="com.kodilla.testing.forum.statistics.ForumStatisticsTestSuite" time="0.001"/>
-  <testcase name="testCalculateAdvStatisticsWithZeroUsers" classname="com.kodilla.testing.forum.statistics.ForumStatisticsTestSuite" time="0.001"/>
-  <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[]]></system-err>
+<testsuite name="com.kodilla.testing.forum.statistics.ForumStatisticsTestSuite" tests="6" skipped="0" failures="0"
+           errors="0" timestamp="2019-12-11T09:55:37" hostname="U0170490-TPL-A" time="0.199">
+    <properties/>
+    <testcase name="testCalculateAdvStatisticsMoreCommentsThanPosts"
+              classname="com.kodilla.testing.forum.statistics.ForumStatisticsTestSuite" time="0.194"/>
+    <testcase name="testCalculateAdvStatisticsWithHundredUsers"
+              classname="com.kodilla.testing.forum.statistics.ForumStatisticsTestSuite" time="0.001"/>
+    <testcase name="testCalculateAdvStatisticsLessCommentsThanPosts"
+              classname="com.kodilla.testing.forum.statistics.ForumStatisticsTestSuite" time="0.001"/>
+    <testcase name="testCalculateAdvStatisticsWithZeroComments"
+              classname="com.kodilla.testing.forum.statistics.ForumStatisticsTestSuite" time="0.001"/>
+    <testcase name="testCalculateAdvStatisticsWithZeroPosts"
+              classname="com.kodilla.testing.forum.statistics.ForumStatisticsTestSuite" time="0.001"/>
+    <testcase name="testCalculateAdvStatisticsWithZeroUsers"
+              classname="com.kodilla.testing.forum.statistics.ForumStatisticsTestSuite" time="0.001"/>
+    <system-out><![CDATA[]]></system-out>
+    <system-err><![CDATA[]]></system-err>
 </testsuite>
