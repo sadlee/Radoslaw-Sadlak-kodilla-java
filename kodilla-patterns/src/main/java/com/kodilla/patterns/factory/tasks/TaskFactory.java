@@ -10,7 +10,7 @@ public class TaskFactory {
             case SHOPPINGTASK:
                 return new ShoppingTask("Mall", "Bread",2);
             case PAINTINGTASK:
-                return new PaintingTask("Flat", "White", "Wall");
+                return new PaintingTask("House", "White", "Wall");
             case DRIVINGTASK:
                 return new DrivingTask("Trip", "Gdansk", "Car");
             default:

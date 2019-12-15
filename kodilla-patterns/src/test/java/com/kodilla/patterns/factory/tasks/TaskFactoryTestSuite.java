@@ -28,7 +28,7 @@ public class TaskFactoryTestSuite {
         painting.executeTask();
 
         //Then
-        Assert.assertEquals("Flat", painting.getTaskName());
+        Assert.assertEquals("House", painting.getTaskName());
         Assert.assertEquals(true, painting.isTaskExecuted());
     }
 
