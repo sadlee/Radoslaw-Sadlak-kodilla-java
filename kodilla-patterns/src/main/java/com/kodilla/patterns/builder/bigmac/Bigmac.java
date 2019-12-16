@@ -3,7 +3,7 @@ package com.kodilla.patterns.builder.bigmac;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Bigmac {
+public final class Bigmac {
     private final String roll;
     private final int burgers;
     private final String sauce;
@@ -40,7 +40,7 @@ public class Bigmac {
         }
     }
 
-    public Bigmac(final String roll, final int burgers, final String sauce, List<String> ingredients) {
+    private Bigmac(final String roll, final int burgers, final String sauce, List<String> ingredients) {
         this.roll = roll;
         this.burgers = burgers;
         this.sauce = sauce;
