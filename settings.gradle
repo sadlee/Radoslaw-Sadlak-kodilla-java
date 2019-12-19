@@ -1,4 +1,6 @@
 rootProject.name = 'kodilla-course'
 include 'kodilla-patterns'
 include 'kodilla-jdbc'
+include 'kodilla-hibernate'
+include 'kodilla-hibernate'
 
