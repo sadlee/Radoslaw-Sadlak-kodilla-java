@@ -9,9 +9,13 @@ public class SettingsFileEngine {
 
     public static SettingsFileEngine getInstance() {
         if (settingsFileEngineInstance == null) {
-            settingsFileEngineInstance = new SettingsFileEngine();
+            synchronized (SettingsFileEngine.class) {
+                if (settingsFileEngineInstance == null) {
+                    settingsFileEngineInstance = new SettingsFileEngine();
+                }
+            }
         }
-        return settingsFileEngineInstance;
+        return SettingsFileEngine;
     }
 
     public String getFileName() {

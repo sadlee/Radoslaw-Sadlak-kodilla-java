@@ -14,7 +14,7 @@ public class LoggerTestSuite {
 
     @Test
     public void getLastLog() {
-        //Give
+        //Given
 
         //When
         String lastLog = Logger.getInstance().getLastLog();

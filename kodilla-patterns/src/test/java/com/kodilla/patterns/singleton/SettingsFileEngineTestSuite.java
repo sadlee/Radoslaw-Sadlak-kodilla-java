@@ -6,6 +6,7 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 
 public class SettingsFileEngineTestSuite {
+
     @BeforeClass
     public static void openSettingsFile() {
         SettingsFileEngine.getInstance().open("myapp.settings");
