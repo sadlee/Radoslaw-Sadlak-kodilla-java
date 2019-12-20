@@ -30,7 +30,7 @@ public class InvoiceDaoTestSuite {
         Product nachos = new Product("nachos");
         Product bread = new Product("bread");
 
-        Item itemMilk = new Item(milk, new BigDecimal(52, 4);
+        Item itemMilk = new Item(milk, new BigDecimal(5, 4);
         Item itemNachos = new Item(nachos, new BigDecimal(8), 1);
         Item itemBread = new Item(bread, new BigDecimal(3), 1);
 
