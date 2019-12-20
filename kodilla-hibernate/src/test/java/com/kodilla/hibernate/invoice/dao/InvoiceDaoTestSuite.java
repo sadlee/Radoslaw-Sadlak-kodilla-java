@@ -26,13 +26,13 @@ public class InvoiceDaoTestSuite {
         //Given
         Invoice invoice = new Invoice("012/12/2019");
 
-        Product bread = new Product("milk");
-        Product butter = new Product("nachos");
-        Product knife = new Product("bread");
+        Product milk = new Product("milk");
+        Product nachos = new Product("nachos");
+        Product bread = new Product("bread");
 
-        Item itemMilk = new Item(bread, new BigDecimal(5), 2);
-        Item itemNachos = new Item(butter, new BigDecimal(9), 1);
-        Item itemBread = new Item(knife, new BigDecimal(250), 1);
+        Item itemMilk = new Item(milk, new BigDecimal(52, 4);
+        Item itemNachos = new Item(nachos, new BigDecimal(8), 1);
+        Item itemBread = new Item(bread, new BigDecimal(3), 1);
 
         itemMilk.setInvoice(invoice);
         itemNachos.setInvoice(invoice);
