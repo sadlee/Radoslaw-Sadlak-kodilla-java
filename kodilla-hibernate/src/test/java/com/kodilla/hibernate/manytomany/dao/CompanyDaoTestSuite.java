@@ -16,6 +16,9 @@ public class CompanyDaoTestSuite {
     @Autowired
     CompanyDao companyDao;
 
+    @Autowired
+    EmployeeDao employeeDao;
+
     @Test
     public void testSaveManyToMany(){
         //Given
@@ -104,5 +107,50 @@ public class CompanyDaoTestSuite {
         //    companyDao.delete(greyMatterId);
         //} catch (Exception e) {
             //do nothing }
+    }
+
+    @Test
+    public void testEmployeeQuery(){
+        //Given
+        Employee johnSmith = new Employee("John", "Smith");
+        Employee stephanieClarkson = new Employee("Stephanie", "Clarkson");
+        Employee lindaKovalsky = new Employee("Linda", "Kovalsky");
+
+        Company softwareMachine = new Company("Software Machine");
+        Company dataMasters = new Company("Data Masters");
+        Company greyMatter = new Company("Grey Matter");
+
+        softwareMachine.getEmployees().add(johnSmith);
+        dataMasters.getEmployees().add(stephanieClarkson);
+        dataMasters.getEmployees().add(lindaKovalsky);
+        greyMatter.getEmployees().add(johnSmith);
+        greyMatter.getEmployees().add(lindaKovalsky);
+
+        johnSmith.getCompanies().add(softwareMachine);
+        johnSmith.getCompanies().add(greyMatter);
+        stephanieClarkson.getCompanies().add(dataMasters);
+        lindaKovalsky.getCompanies().add(dataMasters);
+        lindaKovalsky.getCompanies().add(greyMatter);
+
+        companyDao.save(softwareMachine);
+        int softwareMachineId = softwareMachine.getId();
+        companyDao.save(dataMasters);
+        int dataMastersId = dataMasters.getId();
+        companyDao.save(greyMatter);
+        int greyMatterId = greyMatter.getId();
+
+        //When
+        List<Employee> employeesList = employeeDao.employeeQuery("Clarkson");
+
+        //Then
+        Assert.assertNotEquals(0, employeesList.size());
+
+        //CleanUp
+        //try {
+        //    companyDao.delete(softwareMachineId);
+        //    companyDao.delete(dataMastersId);
+        //    companyDao.delete(greyMatterId);
+        //} catch (Exception e) {
+        //do nothing }
     }
 }
