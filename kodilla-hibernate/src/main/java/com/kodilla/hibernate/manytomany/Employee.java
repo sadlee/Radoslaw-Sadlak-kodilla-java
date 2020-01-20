@@ -5,16 +5,16 @@ import javax.validation.constraints.NotNull;
 import java.util.ArrayList;
 import java.util.List;
 
-@NamedQueries({
-        @NamedQuery(
-                name = "Employee.retrieveWithLastname",
-                query = "FROM Employee WHERE lastname = :LASTNAME"
-        ),
-        @NamedQuery(
-                name = "Employee.retrieveWithAnyLettersLastname",
-                query = "FROM Employee WHERE lastname LIKE CONCAT('%', :ARG ,'%')"
-        ),
-})
+@NamedNativeQuery(
+        name = "Employee.retrieveEmployeeLike",
+        query = "SELECT * FROM EMPLOYEES WHERE LASTNAME LIKE CONCAT('%', :LASTNAME , '%')",
+        resultClass = Employee.class
+)
+
+@NamedQuery(
+        name = "Employee.retrieveEmployeeWithLastname",
+        query = "FROM Employee WHERE lastname = :LASTNAME"
+)
 
 @Entity
 @Table(name = "EMPLOYEES")
@@ -52,6 +52,16 @@ public class Employee {
         return lastname;
     }
 
+    @ManyToMany(cascade = CascadeType.ALL)
+    @JoinTable(
+            name = "JOIN_COMPANY_EMPLOYEE",
+            joinColumns = {@JoinColumn(name = "EMPLOYEE_ID", referencedColumnName = "EMPLOYEE_ID")},
+            inverseJoinColumns = {@JoinColumn(name = "COMPANY_ID", referencedColumnName = "COMPANY_ID")}
+    )
+    public List<Company> getCompanies() {
+        return companies;
+    }
+
     private void setId(int id) {
         this.id = id;
     }
@@ -64,17 +74,7 @@ public class Employee {
         this.lastname = lastname;
     }
 
-    @ManyToMany(cascade = CascadeType.ALL)
-    @JoinTable(
-            name = "JOIN_COMPANY_EMPLOYEE",
-            joinColumns = {@JoinColumn(name = "EMPLOYEE_ID", referencedColumnName = "EMPLOYEE_ID")},
-            inverseJoinColumns = {@JoinColumn(name = "COMPANY_ID", referencedColumnName = "COMPANY_ID")}
-    )
-    public List<Company> getCompanies() {
-        return companies;
-    }
-
-    public void setCompanies(List<Company> companies) {
+    private void setCompanies(List<Company> companies) {
         this.companies = companies;
     }
 }
