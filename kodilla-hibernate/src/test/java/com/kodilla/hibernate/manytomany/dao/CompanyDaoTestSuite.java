@@ -86,7 +86,7 @@ public class CompanyDaoTestSuite {
         companyDao.save(greyMatter);
 
         //When
-        List<Employee> lastName = employeeDao.retrieveEmployeeWithLastname("Smith");
+        List<Employee> lastName = employeeDao.retrieveEmployeeWithLastname("Clarckson");
         List<Company> nameStartedWith = companyDao.retrieveCompanyNameLike("Sof");
 
         //Then

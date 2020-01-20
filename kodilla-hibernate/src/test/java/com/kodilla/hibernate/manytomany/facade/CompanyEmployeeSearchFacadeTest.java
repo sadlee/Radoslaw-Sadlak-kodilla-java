@@ -58,7 +58,7 @@ public class CompanyEmployeeSearchFacadeTest {
         resultEmployeeList.add(johnSmith);
         resultEmployeeList.add(lindaSmith);
         //When
-        List<Company> queryResult = companyEmployeeSearchFacade.retrieveCompanyLike("oft");
+        List<Company> queryResult = companyEmployeeSearchFacade.retrieveCompanyLike("rey");
         //Then
         Assert.assertEquals(resultCompanyList.size(), queryResult.size());
         //CleanUp
@@ -108,7 +108,7 @@ public class CompanyEmployeeSearchFacadeTest {
 
 
         //When
-        List<Employee> queryResult = companyEmployeeSearchFacade.retrieveEmployeeLike("mit");
+        List<Employee> queryResult = companyEmployeeSearchFacade.retrieveEmployeeLike("nda");
         //Then
         Assert.assertEquals(resultEmployeeList.size(), queryResult.size());
 
