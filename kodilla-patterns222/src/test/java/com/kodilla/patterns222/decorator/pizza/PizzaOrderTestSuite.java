@@ -33,6 +33,7 @@ public class PizzaOrderTestSuite {
         theOrder = new Cheese(theOrder);
         theOrder = new Ham(theOrder);
         theOrder = new Sauce(theOrder);
+        theOrder = new Tomatoes(theOrder);
         //When
         BigDecimal calculatedCost = theOrder.getCost();
         //Then
@@ -46,9 +47,10 @@ public class PizzaOrderTestSuite {
         theOrder = new Cheese(theOrder);
         theOrder = new Ham(theOrder);
         theOrder = new Sauce(theOrder);
+        theOrder = new Tomatoes(theOrder);
         //When
         String description = theOrder.getDescription();
         //Then
-        assertEquals("Basic pizza + Cheese + Ham + Sauce", description);
+        assertEquals("Basic pizza + Cheese + Ham + Sauce + Tomatoes", description);
     }
 }
