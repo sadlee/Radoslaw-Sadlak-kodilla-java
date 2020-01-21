@@ -1,5 +1,8 @@
 package com.kodilla.patterns222.facade;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
 import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.Iterator;
