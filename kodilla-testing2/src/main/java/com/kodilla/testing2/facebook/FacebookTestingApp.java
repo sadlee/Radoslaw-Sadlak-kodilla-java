@@ -28,6 +28,6 @@ public class FacebookTestingApp {
 
         WebElement selectCombo3 = driver.findElement(By.xpath(XPATH_SELECT_3));
         Select selectBoard3 = new Select(selectCombo3);
-        selectBoard3.selectByIndex(20);
+        selectBoard3.selectByIndex(22);
     }
 }
