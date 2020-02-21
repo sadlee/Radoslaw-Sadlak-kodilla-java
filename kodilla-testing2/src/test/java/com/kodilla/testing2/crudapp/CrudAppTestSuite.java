@@ -14,6 +14,7 @@ import java.util.Random;
 import java.util.stream.Collectors;
 import static org.junit.Assert.assertTrue;
 
+
 public class CrudAppTestSuite {
     private static final String BASE_URL = "https://sadlee.github.io/";
     private WebDriver driver;
